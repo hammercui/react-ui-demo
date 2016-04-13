@@ -1,0 +1,41 @@
+{
+  "name": "react-demo-weui",
+  "version": "1.0.0",
+  "description": "weui demo for react",
+  "main": "./main",
+  "author": "hammercui",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dev",
+    "clean": "rimraf ./lib ./coverage",
+    "build": "webpack --config webpack.config.prod.js --out-dir ./build",
+    "build:example": "rimraf ./dist && webpack",
+    "lint": "eslint 'src/**/*.@(js|jsx)'",
+    "pretest": "npm run lint",
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test:watch": "npm run test -- --watch",
+    "coverage": "npm run lint & istanbul cover _mocha -- --compilers js:babel-core/register --recursive"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-weui": "^0.2.0",
+    "weui": "^0.4.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.23.0",
+    "less-loader": "^2.2.1",
+    "postcss-loader": "^0.8.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "uglify-loader": "^1.2.0",
+    "open-browser-webpack-plugin": "0.0.1",
+    "react-dom": "^0.14.7",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1",
+    "weui": "^0.4.1"
+  }
+}
