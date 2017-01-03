@@ -3,17 +3,18 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WeUI from 'react-weui';
+import Root from "./root";
 import 'weui';
-const {Button, Toast} = WeUI;
-
+import injectTapEventPlugin from "react-tap-event-plugin";
+injectTapEventPlugin();
 
 class App extends React.Component {
     constructor(props){
         super(props)
         this.state = {
             show: false,
-            timer: null
+            timer: null,
+            dataSource:["1","2","3"]
         };
     }
 
@@ -24,9 +25,10 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <Button type="primary"  onClick={this.show.bind(this)}>确认按钮</Button>
-                <Toast show={this.state.show}>loading...</Toast>
+                <Root/>
             </div>
+
+
         );
     }
 
@@ -38,4 +40,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App>test</App>,document.getElementById('container'))
+ReactDOM.render(<App>test</App>,document.getElementById('container'));

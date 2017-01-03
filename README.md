@@ -2,6 +2,8 @@
 
 这是一个使用[react-weui](https://github.com/weui/react-weui)的reactjs项目demo,在demo中学习如何使用[react-weui](https://github.com/weui/react-weui)来开发一个微信风格的h5手机站。
 
+新增[material-ui](https://github.com/callemall/material-ui)组件,这是一套符合google material design规范的组件，star数已经2w+了
+
 
 #  运行
 
@@ -18,3 +20,5 @@ npm run dev
 npm run build
 ```
 这样就把JavaScript文件进行打包，生成`main.min.js`跟`common.min.js`两个文件。这两个文件都已经压缩处理了，我们在正式环境可以直接引用，建议部署到cdn上，分散服务器压力
+
+#
